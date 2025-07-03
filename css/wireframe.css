@@ -1,4 +1,5 @@
 @charset 'utf-8';
+
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
@@ -11,6 +12,7 @@ header {
   background: #fff;
   border-bottom: 1px solid #eee;
 }
+
 .gnb {
   display: flex;
   justify-content: center;
@@ -20,6 +22,7 @@ header {
   padding: 20px 0;
   font-size: 1.1rem;
 }
+
 .gnb li {
   cursor: pointer;
   color: #666;
@@ -34,15 +37,18 @@ header {
   padding: 60px 10vw 60px 10vw;
   min-height: 320px;
 }
+
 .main-text h1 {
   font-size: 2.5rem;
   margin: 0 0 20px 0;
   font-weight: 700;
 }
+
 .main-text p {
   font-size: 1.2rem;
   margin-bottom: 24px;
 }
+
 .main-text button {
   background: #3182f6;
   color: #fff;
@@ -52,6 +58,7 @@ header {
   font-size: 1.1rem;
   cursor: pointer;
 }
+
 .main-image {
   width: 320px;
   height: 180px;
@@ -66,12 +73,13 @@ header {
   gap: 32px;
   margin: 48px 0;
 }
+
 .card {
   width: 140px;
   height: 160px;
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
 
 /* 프로모션 배너 */
@@ -90,12 +98,13 @@ header {
   gap: 32px;
   margin: 48px 0;
 }
+
 .recommend-card {
   width: 180px;
   height: 120px;
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
 
 /* 하단 배너 */
@@ -116,13 +125,41 @@ footer {
   color: #888;
   font-size: 0.95rem;
 }
+
 .footer-menu {
   margin-bottom: 12px;
 }
+
 .footer-menu span {
   margin: 0 16px;
   cursor: pointer;
 }
+
 .footer-copy {
   font-size: 0.9rem;
+}
+
+.popup {
+  position: fixed;
+  width: 420px;
+  height: 250px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 24px;
+  z-index: 999999999999;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+  line-height: 1.75;
+}
+
+button {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  position: absolute;
+  right: 20px;
 }
