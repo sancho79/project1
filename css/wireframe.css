@@ -1,144 +1,399 @@
 @charset 'utf-8';
 
 body {
-  margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
-  background: #fafbfc;
+  font-family: 'Noto Sans KR', Arial, sans-serif;
+  background: #fff;
   color: #222;
+  margin: 0;
 }
 
 /* 헤더 */
-header {
+.toss-header {
   background: #fff;
   border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-
-.gnb {
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+}
+.logo img {
+  height: 32px;
+}
+.main-nav ul {
+  display: flex;
+  gap: 32px;
   list-style: none;
   margin: 0;
-  padding: 20px 0;
+  padding: 0;
+}
+.main-nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
   font-size: 1.1rem;
 }
-
-.gnb li {
-  cursor: pointer;
-  color: #666;
-}
-
-/* 메인 배너 */
-.main-banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #e9f3ff;
-  padding: 60px 10vw 60px 10vw;
-  min-height: 320px;
-}
-
-.main-text h1 {
-  font-size: 2.5rem;
-  margin: 0 0 20px 0;
-  font-weight: 700;
-}
-
-.main-text p {
-  font-size: 1.2rem;
-  margin-bottom: 24px;
-}
-
-.main-text button {
+.header-actions .login-btn {
   background: #3182f6;
   color: #fff;
-  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* 메인 비주얼 */
+.main-visual {
+  background: url('https://static.toss.im/assets/homepage/newtossim/new_main.png') no-repeat right center/cover, #f5f7fa;
+  padding: 100px 0 80px 0;
+  min-height: 480px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.main-visual-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  height: 100%;
+}
+.main-text {
+  max-width: 500px;
+  background: rgba(255,255,255,0.85);
+  padding: 40px 32px;
+  border-radius: 24px;
+}
+.main-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.main-text p {
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+}
+.main-cta {
+  display: inline-block;
+  background: #3182f6;
+  color: #fff;
   border-radius: 24px;
   padding: 14px 36px;
   font-size: 1.1rem;
-  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
 }
-
-.main-image {
-  width: 320px;
-  height: 180px;
-  background: #d3e6fa;
-  border-radius: 24px;
+@media (max-width: 900px) {
+  .main-visual {
+    background-position: center 80px;
+    background-size: cover;
+    padding: 60px 0 40px 0;
+    min-height: 320px;
+  }
+  .main-text {
+    padding: 24px 12px;
+    max-width: 100%;
+  }
+  .main-visual-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
 }
 
 /* 서비스 카드 */
-.service-cards {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  margin: 48px 0;
-}
-
-.card {
-  width: 140px;
-  height: 160px;
+.service-section {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-}
-
-/* 프로모션 배너 */
-.promotion-banner {
-  width: 90vw;
-  height: 120px;
-  margin: 40px auto;
-  background: #f5f7fa;
-  border-radius: 18px;
-}
-
-/* 추천 서비스 */
-.recommend {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  margin: 48px 0;
-}
-
-.recommend-card {
-  width: 180px;
-  height: 120px;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-}
-
-/* 하단 배너 */
-.bottom-banner {
-  width: 90vw;
-  height: 100px;
-  margin: 40px auto;
-  background: #e9f3ff;
-  border-radius: 18px;
-}
-
-/* 푸터 */
-footer {
-  background: #fff;
-  border-top: 1px solid #eee;
-  padding: 32px 0 16px 0;
+  padding: 60px 0;
   text-align: center;
-  color: #888;
-  font-size: 0.95rem;
+}
+.service-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.service-card {
+  background: #f5f7fa;
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.service-card img {
+  height: 56px;
+  margin-bottom: 16px;
+}
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
-.footer-menu {
+/* 혁신 섹션 */
+.innovation-section {
+  background: #eaf3ff;
+  padding: 60px 0;
+  text-align: center;
+}
+.innovation-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+.innovation-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.innovation-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.innovation-card img {
+  height: 48px;
   margin-bottom: 12px;
 }
 
-.footer-menu span {
+/* 보안 섹션 */
+.security-section {
+  background: #fff;
+  padding: 60px 0;
+}
+.security-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.security-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.security-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.security-image img {
+  max-width: 240px;
+  width: 100%;
+}
+
+/* 소식 섹션 */
+.news-section {
+  background: #f5f7fa;
+  padding: 60px 0;
+  text-align: center;
+}
+.news-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+.news-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.news-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.news-card img {
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* 채용 섹션 */
+.recruit-section {
+  background: #fff;
+  padding: 60px 0;
+}
+.recruit-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.recruit-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.recruit-info p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.recruit-btn {
+  display: inline-block;
+  background: #3182f6;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 28px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.recruit-image img {
+  max-width: 240px;
+  width: 100%;
+}
+
+/* 다운로드 섹션 */
+.download-section {
+  background: #eaf3ff;
+  padding: 60px 0;
+  text-align: center;
+}
+.download-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+.download-inner {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.download-btn {
+  display: inline-block;
+  background: #3182f6;
+  color: #fff;
+  border-radius: 20px;
+  padding: 12px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* 혜택 섹션 */
+.benefit-section {
+  background: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+.benefit-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+.benefit-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.benefit-card {
+  background: #eaf3ff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.benefit-card img {
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* 이벤트 섹션 */
+.event-section {
+  background: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+.event-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+.event-banner img {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* 고객센터 섹션 */
+.customer-section {
+  background: #f5f7fa;
+  padding: 60px 0;
+}
+.customer-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.customer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.customer-info p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.customer-btn {
+  display: inline-block;
+  background: #3182f6;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 28px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.customer-image img {
+  max-width: 240px;
+  width: 100%;
+}
+
+/* 푸터 */
+.toss-footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 0 20px 0;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-menu {
+  margin-bottom: 16px;
+}
+.footer-menu a {
+  color: #fff;
   margin: 0 16px;
-  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
 }
-
 .footer-copy {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  color: #bbb;
 }
-
 .popup {
   position: fixed;
   width: 420px;
@@ -155,7 +410,6 @@ footer {
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
   line-height: 1.75;
 }
-
 button {
   display: block;
   padding: 8px 16px;

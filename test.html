@@ -8,175 +8,103 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
   <link rel="stylesheet" href="css/test.css">
 </head>
+<style>
+  .service-card {
+  background: #fff;
+  border-radius: 32px;
+  padding: 0;
+  width: 260px;
+  box-shadow: 0 8px 32px 0 rgba(30, 32, 37, 0.10), 0 1.5px 4px 0 rgba(30,32,37,0.04);
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #f0f2f5;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+.service-card:hover {
+  box-shadow: 0 16px 48px 0 rgba(30, 32, 37, 0.16), 0 2px 8px 0 rgba(30,32,37,0.08);
+  transform: translateY(-4px) scale(1.03);
+}
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #f5f7fa;
+  border-bottom: 1px solid #f0f2f5;
+  margin-bottom: 0;
+  display: block;
+}
+.service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 24px 0 8px 0;
+}
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 24px;
+}
+</style>
 <body>
-  <header class="toss-header">
-    <div class="header-inner">
-      <a href="#" class="logo">
-        <img src="images/toss-logo.png" alt="Toss 로고">
-      </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#service">서비스</a></li>
-          <li><a href="#benefit">혜택</a></li>
-          <li><a href="#event">이벤트</a></li>
-          <li><a href="#customer">고객센터</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <a href="#login" class="login-btn">로그인</a>
-      </div>
+   <div class="popup">
+        해당 사이트는 학습용으로 제작되었으며 toss와 무관합니다.
+        구직용 포트폴리오로 상업적 목적이 없음을 알립니다.
+        <button>닫기</button>
     </div>
+  <!-- 헤더 네비게이션 -->
+  <header>
+    <nav>
+      <ul class="gnb">
+        <li>홈</li>
+        <li>서비스</li>
+        <li>혜택</li>
+        <li>고객센터</li>
+        <li>내정보</li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section class="main-visual">
-      <div class="main-visual-inner">
-        <div class="main-text">
-          <h1>금융의 모든 것<br>토스에서 쉽고 간편하게</h1>
-          <p>토스와 함께라면 누구나 쉽고 안전하게 금융을 이용할 수 있습니다.</p>
-          <a href="#" class="main-cta">앱 다운로드</a>
-        </div>
-        <div class="main-image">
-          <img src="images/main-visual.png" alt="메인 비주얼 이미지">
-        </div>
-      </div>
-    </section>
-
-    <section class="service-section" id="service">
-      <h2>토스 주요 서비스</h2>
-      <div class="service-list">
-        <div class="service-card">
-          <img src="images/service1.png" alt="서비스1">
-          <h3>송금</h3>
-          <p>간편하고 빠른 송금 서비스</p>
-        </div>
-        <div class="service-card">
-          <img src="images/service2.png" alt="서비스2">
-          <h3>계좌조회</h3>
-          <p>모든 계좌를 한눈에</p>
-        </div>
-        <div class="service-card">
-          <img src="images/service3.png" alt="서비스3">
-          <h3>신용관리</h3>
-          <p>내 신용점수 무료 조회</p>
-        </div>
-        <div class="service-card">
-          <img src="images/service4.png" alt="서비스4">
-          <h3>보험</h3>
-          <p>보험도 쉽고 간편하게</p>
-        </div>
-      </div>
-    </section>
-<section class="innovation-section">
-      <h2>토스의 혁신</h2>
-      <div class="innovation-list">
-        <div class="innovation-card">
-          <img src="images/innovation1.png" alt="혁신1">
-          <h3>간편한 인증</h3>
-          <p>복잡한 인증을 한 번에 해결</p>
-        </div>
-        <div class="innovation-card">
-          <img src="images/innovation2.png" alt="혁신2">
-          <h3>모두를 위한 금융</h3>
-          <p>누구나 쉽게 접근 가능한 서비스</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="security-section">
-      <h2>토스의 보안</h2>
-      <div class="security-inner">
-        <div class="security-info">
-          <h3>최고 수준의 보안</h3>
-          <p>토스는 금융보안원 인증을 받은 안전한 서비스입니다.</p>
-        </div>
-        <div class="security-image">
-          <img src="images/security.png" alt="보안 이미지">
-        </div>
-      </div>
-    </section>
-
-    <section class="news-section">
-      <h2>토스의 소식</h2>
-      <div class="news-list">
-        <div class="news-card">
-          <img src="images/news1.png" alt="소식1">
-          <h3>토스, 새로운 서비스 출시</h3>
-          <p>2025.07.01</p>
-        </div>
-        <div class="news-card">
-          <img src="images/news2.png" alt="소식2">
-          <h3>토스, 누적 가입자 2000만 돌파</h3>
-          <p>2025.06.15</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="recruit-section">
-      <h2>토스와 함께할 인재를 찾습니다</h2>
-      <div class="recruit-inner">
-        <div class="recruit-info">
-          <p>토스와 함께 성장할 여러분을 기다립니다.</p>
-          <a href="#" class="recruit-btn">채용공고 보기</a>
-        </div>
-        <div class="recruit-image">
-          <img src="images/recruit.png" alt="채용 이미지">
-        </div>
-      </div>
-    </section>
-
-    <section class="download-section">
-      <h2>토스 앱 다운로드</h2>
-      <div class="download-inner">
-        <a href="#" class="download-btn">App Store</a>
-        <a href="#" class="download-btn">Google Play</a>
-      </div>
-    </section>
-    <section class="benefit-section" id="benefit">
-      <h2>혜택</h2>
-      <div class="benefit-list">
-        <div class="benefit-card">
-          <img src="images/benefit1.png" alt="혜택1">
-          <p>다양한 캐시백과 이벤트</p>
-        </div>
-        <div class="benefit-card">
-          <img src="images/benefit2.png" alt="혜택2">
-          <p>추천인 혜택</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="event-section" id="event">
-      <h2>이벤트</h2>
-      <div class="event-banner">
-        <img src="images/event-banner.png" alt="이벤트 배너">
-      </div>
-    </section>
-
-    <section class="customer-section" id="customer">
-      <h2>고객센터</h2>
-      <div class="customer-inner">
-        <div class="customer-info">
-          <p>궁금한 점이 있으신가요?</p>
-          <a href="#" class="customer-btn">자주 묻는 질문</a>
-        </div>
-        <div class="customer-image">
-          <img src="images/customer.png" alt="고객센터 이미지">
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="toss-footer">
-    <div class="footer-inner">
-      <div class="footer-menu">
-        <a href="#">회사소개</a>
-        <a href="#">이용약관</a>
-        <a href="#">개인정보처리방침</a>
-        <a href="#">고객센터</a>
-      </div>
-      <div class="footer-copy">© 2025 Toss Corp.</div>
+  <!-- 메인 배너 -->
+  <section class="main-banner">
+    <div class="main-text">
+      <h1>토스와 함께하는<br>새로운 금융 생활</h1>
+      <p>간편하고 안전하게, 토스에서 시작하세요.</p>
+      <button>시작하기</button>
     </div>
+    <div class="main-image"></div>
+  </section>
+
+  <!-- 주요 서비스 카드 -->
+  <section class="service-cards">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </section>
+
+  <!-- 프로모션/이벤트 배너 -->
+  <section class="promotion-banner"></section>
+
+  <!-- 추천 서비스 -->
+  <section class="recommend">
+    <div class="recommend-card"></div>
+    <div class="recommend-card"></div>
+    <div class="recommend-card"></div>
+  </section>
+
+  <!-- 하단 배너 -->
+  <section class="bottom-banner"></section>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="footer-menu">
+      <span>회사소개</span>
+      <span>이용약관</span>
+      <span>개인정보처리방침</span>
+      <span>고객센터</span>
+    </div>
+    <div class="footer-copy">© 2025 Toss Corp.</div>
   </footer>
+  <script src="script/js.js"></script>
 </body>
 </html>
