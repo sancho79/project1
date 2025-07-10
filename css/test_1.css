@@ -50,17 +50,32 @@ body {
 }
 
 /* 메인 비주얼 */
+
 .main-visual {
-  background: #f5f7fa;
-  padding: 80px 0 60px 0;
+  background: url('https://static.toss.im/assets/homepage/newtossim/new_main.png') no-repeat right center/cover, #f5f7fa;
+  padding: 100px 0 80px 0;
+  min-height: 480px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 .main-visual-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 40px;
+  height: 100%;
+}
+.main-text {
+  max-width: 500px;
+  background: rgba(255,255,255,0.85);
+  padding: 40px 32px;
+  border-radius: 24px;
 }
 .main-text h1 {
   font-size: 2.5rem;
@@ -81,13 +96,150 @@ body {
   font-weight: 600;
   text-decoration: none;
 }
-.main-image img {
-  max-width: 400px;
+@media (max-width: 900px) {
+  .main-visual {
+    background-position: center 80px;
+    background-size: cover;
+    padding: 60px 0 40px 0;
+    min-height: 320px;
+  }
+  .main-text {
+    padding: 24px 12px;
+    max-width: 100%;
+  }
+  .main-visual-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+/* 여기까지 메인  와이어에 있는거 */
+
+
+.bank-visual {
+  background: linear-gradient(90deg, #f5f7fa 60%, #fff 100%);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.bank-visual-inner {
+  max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.bank-text {
+  flex: 1 1 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #222;
+  letter-spacing: -2px;
+}
+.bank-visual-image {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.bank-visual-image img {
+  width: 420px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 8px 32px 0 rgba(30,32,37,0.10);
+  border-radius: 36px;
+}
+@media (max-width: 900px) {
+  .bank-visual {
+    min-height: 400px;
+    padding: 0 0 32px 0;
+  }
+  .bank-visual-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .bank-visual-image img {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .bank-text {
+    font-size: 2rem;
+  }
 }
 
+/* 새롭게추가 */
+.service-feature {
+  background: #fff;
+  padding: 100px 0 80px 0;
+}
+.service-feature-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+.feature-text {
+  flex: 1 1 0;
+}
+.feature-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.feature-text p {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+.feature-btn {
+  display: inline-block;
+  background: #3182f6;
+  color: #fff;
+  border-radius: 24px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.feature-image {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.feature-image img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 36px;
+  box-shadow: 0 8px 32px 0 rgba(30,32,37,0.10);
+}
+@media (max-width: 900px) {
+  .service-feature-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .feature-image img {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .feature-text h2 {
+    font-size: 1.5rem;
+  }
+}
+/* 여기까지  */
 /* 서비스 카드 */
-.service-section {
+/* .service-section {
   background: #fff;
   padding: 60px 0;
   text-align: center;
@@ -116,8 +268,8 @@ body {
 .service-card h3 {
   font-size: 1.2rem;
   margin-bottom: 8px;
-}
-
+}  */
+ 
 /* 혁신 섹션 */
 .innovation-section {
   background: #eaf3ff;
