@@ -1,5 +1,16 @@
 @charset 'utf-8';
 
+/* Prevent horizontal scroll globally */
+html, body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* Ensure all elements use border-box for sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Noto Sans KR', Arial, sans-serif;
   background: #fff;
@@ -50,6 +61,7 @@ body {
 }
 
 /* 메인 비주얼 */
+
 .main-visual {
   background: url('https://static.toss.im/assets/homepage/newtossim/new_main.png') no-repeat right center/cover, #f5f7fa;
   padding: 100px 0 80px 0;
@@ -112,39 +124,314 @@ body {
     gap: 24px;
   }
 }
+/* 여기까지 메인  와이어에 있는거 */
 
-/* 서비스 카드 */
-.service-section {
-  background: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-.service-section h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-.service-list {
+
+.bank-visual {
+  background: linear-gradient(90deg, #f5f7fa 60%, #fff 100%);
+  min-height: 600px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 32px;
+  padding: 0;
 }
-.service-card {
-  background: #f5f7fa;
-  border-radius: 20px;
-  padding: 32px 24px;
-  width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  text-align: center;
+.bank-visual-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
-.service-card img {
-  height: 56px;
+.bank-text {
+  flex: 1 1 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #222;
+  letter-spacing: -2px;
+}
+.bank-visual-image {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.bank-visual-image img {
+  width: 340px; /* 기존 420px에서 340px로 줄임 */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 8px 32px 0 rgba(30,32,37,0.10);
+  border-radius: 36px;
+}
+@media (max-width: 900px) {
+  .bank-visual {
+    min-height: 400px;
+    padding: 0 0 32px 0;
+  }
+  .bank-visual-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .bank-visual-image img {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .bank-text {
+    font-size: 2rem;
+  }
+}
+
+/* 새롭게추가 */
+.service-feature {
+  background: #fff;
+  padding: 100px 0 80px 0;
+}
+.service-feature-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+.feature-text {
+  flex: 1 1 0;
+}
+.feature-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.feature-text p {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+.feature-btn {
+  display: inline-block;
+  background: #3182f6;
+  color: #fff;
+  border-radius: 24px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.feature-image {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.feature-image img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 36px;
+  box-shadow: 0 8px 32px 0 rgba(30,32,37,0.10);
+}
+@media (max-width: 900px) {
+  .service-feature-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .feature-image img {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .feature-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 슬아이드 섹션 loan-feature */
+
+.loan-feature {
+  background: #fff;
+  padding: 120px 0 100px 0;
+}
+.loan-feature-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+.loan-text {
+  flex: 1 1 0;
+  margin-top: 40px;
+}
+.loan-label {
+  color: #3182f6;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.loan-text h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 48px;
+  line-height: 1.25;
+}
+.loan-desc strong {
+  font-size: 1.5rem;
+  color: #222;
+  font-weight: 700;
+  line-height: 1.4;
+  display: block;
   margin-bottom: 16px;
 }
-.service-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+.loan-desc p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
+.loan-phone {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.phone-slider {
+  position: relative;
+  width: 340px;
+  height: 680px; /* 기존 700px에서 680px로 20px 줄임 (상하 10px씩) */
+}
+.phone-slider img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.6s;
+  z-index: 1;
+  box-shadow: 0 8px 32px 0 rgba(30,32,37,0.10); /* bank-visual-image와 동일한 그림자 추가 */
+  border-radius: 36px; /* 동일하게 라운드 처리 */
+}
+.phone-slider img.active {
+  opacity: 1;
+  z-index: 2;
+}
+.phone-dots {
+  margin-top: 24px;
+  text-align: center;
+}
+.phone-dots .dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #e0e6ef;
+  margin: 0 6px;
+  transition: background 0.3s;
+}
+.phone-dots .dot.active {
+  background: #3182f6;
+}
+@media (max-width: 900px) {
+  .loan-feature-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .phone-slider {
+    width: 90vw;
+    max-width: 340px;
+    height: 480px; /* 기존 500px에서 480px로 20px 줄임 */
+  }
+}
+/* 여기까지 슬라이드 */
 
+/* 신용 섹션 */
+.credit-section {
+  background: #f7f8fa;
+  padding: 120px 0 100px 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.credit-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.credit-header {
+  margin-bottom: 56px;
+}
+.credit-header .credit-label {
+  color: #3182f6;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.credit-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0;
+  text-align: left;
+  line-height: 1.3;
+}
+.credit-features {
+  display: flex;
+  justify-content: center;
+  gap: 48px 40px;
+  flex-wrap: wrap;
+}
+.credit-feature {
+  background: none;
+  width: 240px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.credit-feature img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+}
+.credit-feature h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+.credit-feature p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .credit-section {
+    padding: 60px 0 40px 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .credit-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .credit-feature {
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 32px;
+  }
+  .credit-header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .credit-header {
+    margin-bottom: 32px;
+  }
+}
+/* 신용끝 */
 /* 혁신 섹션 */
 .innovation-section {
   background: #eaf3ff;
@@ -178,6 +465,7 @@ body {
   background: #fff;
   padding: 60px 0;
 }
+
 .security-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
@@ -416,4 +704,67 @@ button {
   border-radius: 8px;
   position: absolute;
   right: 20px;
+}
+
+/* 인재(채용) 섹션: 스크롤시 이미지 확대 효과 */
+.recruit-visual-section {
+  background: #fff;
+  padding: 0;
+  text-align: center;
+}
+.recruit-visual-inner {
+  max-width: none;
+  margin: 0;
+  position: relative;
+}
+.recruit-visual-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 70vh;
+  height: 80vh;
+  max-height: 900px;
+  margin: 0 auto;
+}
+.recruit-visual-image img {
+  width: 100vw;
+  height: 100%;
+  max-width: none;
+  min-width: 100vw;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
+  box-shadow: none;
+  display: block;
+}
+.recruit-visual-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  white-space: pre-line;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .recruit-visual-image {
+    min-height: 40vh;
+    height: 45vw;
+    max-height: 400px;
+  }
+  .recruit-visual-image img {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+  }
+  .recruit-visual-text {
+    font-size: 1.5rem;
+  }
 }
