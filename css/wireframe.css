@@ -739,6 +739,7 @@ button {
   transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
   box-shadow: none;
   display: block;
+  will-change: transform;
 }
 .recruit-visual-text {
   position: absolute;
@@ -768,3 +769,195 @@ button {
     font-size: 1.5rem;
   }
 }
+
+/* 부동산/자동차 섹션 추가 */
+.estate-car-section {
+  width: 100vw;
+  background: #fff;
+  padding: 80px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.estate-car-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.estate-car-image-wrap {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f5f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.estate-car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+.estate-car-title {
+  margin-top: 40px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  text-align: left;
+}
+.estate-car-subtitle {
+  font-size: 1.5rem;
+  color: #b0b8c1;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.estate-car-desc {
+  font-size: 1.1rem;
+  color: #4e5968;
+  line-height: 1.7;
+  text-align: left;
+  margin-bottom: 32px;
+}
+@media (max-width: 900px) {
+  .estate-car-image-wrap {
+    width: 90vw;
+    height: 50vw;
+    min-height: 200px;
+    max-width: 100vw;
+  }
+  .estate-car-inner {
+    max-width: 100vw;
+  }
+  .estate-car-title {
+    font-size: 1.3rem;
+    margin-top: 24px;
+  }
+  .estate-car-subtitle {
+    font-size: 1rem;
+  }
+  .estate-car-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===================== 결제 섹션 (toss.im 스타일) ===================== */
+.pay-section {
+  width: 100vw;
+  background: #f7f8fa;
+  padding: 120px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.pay-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 80px;
+  position: relative;
+}
+.pay-text-block {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(.22,.61,.36,1), transform 0.8s cubic-bezier(.22,.61,.36,1);
+}
+.pay-image-block {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(.22,.61,.36,1) 0.2s, transform 0.8s cubic-bezier(.22,.61,.36,1) 0.2s;
+}
+.pay-section.active .pay-text-block {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pay-section.active .pay-image-block {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pay-label {
+  color: #3182f6;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.pay-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+.pay-desc {
+  font-size: 1.1rem;
+  color: #4e5968;
+  line-height: 1.7;
+}
+.pay-img {
+  display: block;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px 0 rgba(30, 32, 37, 0.10);
+  background: #fff;
+  transition: transform 0.7s cubic-bezier(.22,.61,.36,1), box-shadow 0.7s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+.pay-img-barcode, .pay-img-receipt {
+  width: 340px;
+  height: 550px;
+  object-fit: contain;
+  margin: 0;
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .pay-inner {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .pay-image-block {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .pay-img-barcode, .pay-img-receipt {
+    width: 60vw;
+    height: 95vw;
+    min-width: 120px;
+    min-height: 180px;
+    max-width: 340px;
+    max-height: 550px;
+  }
+  .pay-title {
+    font-size: 1.3rem;
+  }
+  .pay-label {
+    font-size: 0.95rem;
+  }
+  .pay-desc, .pay-bottom-desc {
+    font-size: 0.95rem;
+  }
+}
+/* ===================== 결제 섹션 끝 ===================== */
