@@ -1,0 +1,372 @@
+/* Pretendard 폰트, 토스 컬러, 반응형, 인터랙션, 레이아웃 */
+:root {
+  --toss-blue: #0064FF;
+  --toss-dark: #222;
+  --toss-light: #f5f7fa;
+  --toss-gray: #888;
+  --header-height: 64px;
+}
+html {
+  font-size: 16px;
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', Arial, sans-serif;
+  background: var(--toss-light);
+  color: var(--toss-dark);
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+/* 팝업 */
+.popup {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: var(--toss-blue);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 1000;
+  font-size: 1rem;
+}
+.popup button {
+  margin-left: 1rem;
+  background: #fff;
+  color: var(--toss-blue);
+  border: none;
+  border-radius: 4px;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  font-weight: 600;
+}
+/* 헤더 */
+.toss-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  z-index: 999;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 2vw;
+}
+.logo img {
+  height: 36px;
+}
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  color: var(--toss-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: var(--toss-blue);
+}
+.login-btn {
+  background: var(--toss-blue);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.5em 1.5em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.login-btn:hover {
+  background: #0050c0;
+}
+/* 메인 비주얼 */
+.main-visual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 3rem auto 2rem auto;
+  padding: 0 2vw;
+  min-height: 340px;
+}
+.main-text {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+.main-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.main-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--toss-gray);
+}
+.main-cta {
+  display: inline-block;
+  background: var(--toss-blue);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.8em 2em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,100,255,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.main-cta:hover {
+  background: #0050c0;
+  box-shadow: 0 4px 16px rgba(0,100,255,0.15);
+}
+.main-img {
+  flex: 1 1 320px;
+  min-width: 240px;
+  text-align: right;
+}
+.main-img img {
+  max-width: 340px;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px rgba(0,100,255,0.08);
+}
+/* 서비스 섹션 */
+.service-section {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 2px 16px rgba(0,100,255,0.04);
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2.5rem 2vw;
+  text-align: center;
+}
+.service-section h2 {
+  font-size: 2rem;
+  color: var(--toss-blue);
+  margin-bottom: 0.5rem;
+}
+.service-section p {
+  color: var(--toss-gray);
+  margin-bottom: 1.5rem;
+}
+.service-img img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 1.5rem;
+}
+/* 대출 슬라이더 */
+.loan-section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem 2vw;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 2px 16px rgba(0,100,255,0.04);
+  text-align: center;
+}
+.loan-section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+.loan-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.slider-track {
+  display: flex;
+  overflow: hidden;
+  width: 220px;
+  height: 420px;
+  position: relative;
+}
+.slider-track img {
+  width: 220px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  left: 0; top: 0;
+}
+.slider-track img.active {
+  opacity: 1;
+  z-index: 1;
+}
+.slider-prev, .slider-next {
+  background: var(--toss-blue);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.slider-prev:hover, .slider-next:hover {
+  background: #0050c0;
+}
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.slider-dots .dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #e0e7ef;
+  display: inline-block;
+  transition: background 0.2s;
+}
+.slider-dots .dot.active {
+  background: var(--toss-blue);
+}
+/* 신용 섹션 */
+.credit-section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem 2vw;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 2px 16px rgba(0,100,255,0.04);
+}
+.credit-section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: var(--toss-blue);
+}
+.credit-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.credit-feature {
+  flex: 1 1 180px;
+  min-width: 180px;
+  max-width: 220px;
+  background: var(--toss-light);
+  border-radius: 1.2rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,100,255,0.04);
+}
+.credit-feature img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+.credit-feature h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.credit-feature p {
+  color: var(--toss-gray);
+  font-size: 0.98rem;
+}
+/* 결제 섹션 */
+.pay-section {
+  max-width: 1100px;
+  margin: 2rem auto 3rem auto;
+  padding: 2rem 2vw;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 2px 16px rgba(0,100,255,0.04);
+  text-align: center;
+}
+.pay-section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: var(--toss-blue);
+}
+.pay-imgs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.pay-imgs img {
+  width: 180px;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,100,255,0.04);
+}
+/* 푸터 */
+.toss-footer {
+  background: #f0f4fa;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--toss-gray);
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+.footer-inner a {
+  color: var(--toss-gray);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-inner a:hover {
+  color: var(--toss-blue);
+}
+.footer-copy {
+  flex-basis: 100%;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+/* 반응형 */
+@media (max-width: 900px) {
+  .main-visual, .service-section, .loan-section, .credit-section, .pay-section {
+    max-width: 98vw;
+    padding: 1.2rem 1vw;
+  }
+  .main-visual {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-img {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .header-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    height: auto;
+    padding: 0.5rem 2vw;
+  }
+}
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+  .main-visual, .service-section, .loan-section, .credit-section, .pay-section {
+    padding: 0.7rem 0.5vw;
+  }
+  .main-text h1 { font-size: 1.5rem; }
+  .main-img img { max-width: 90vw; }
+  .credit-features { flex-direction: column; gap: 1rem; }
+  .pay-imgs { flex-direction: column; gap: 1rem; }
+  .footer-inner { flex-direction: column; gap: 0.5rem; }
+} 
