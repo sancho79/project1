@@ -77,3 +77,27 @@ window.addEventListener('scroll', function() {
   }
 });
 // ===================== 인재(채용) 섹션 스크롤 이미지 확대 끝 =====================
+
+// =====================  dot 버튼 =====================
+document.addEventListener('DOMContentLoaded', function() {
+  // dot 생성
+  let scrollDot = document.createElement('div');
+  scrollDot.className = 'dot';
+  document.body.appendChild(scrollDot);
+
+  // 스크롤 시 dot 표시/숨김
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 200) {
+      scrollDot.classList.add('on');
+    } else {
+      scrollDot.classList.remove('on');
+    }
+  });
+
+  // 클릭 시 맨 위로
+  scrollDot.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+// ===================== 플로팅 dot 끝 =====================

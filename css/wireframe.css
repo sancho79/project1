@@ -660,28 +660,111 @@ body {
 
 /* 푸터 */
 .toss-footer {
-  background: #222;
-  color: #fff;
-  padding: 40px 0 20px 0;
+  background: #f7f8fa;
+  color: #222;
+  padding: 60px 0 40px 0;
+  font-size: 1rem;
+  font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
 }
-.footer-inner {
+.toss-footer .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  padding: 0 24px;
 }
-.footer-menu {
-  margin-bottom: 16px;
+.toss-footer .footer-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
-.footer-menu a {
-  color: #fff;
-  margin: 0 16px;
+.toss-footer .footer-col {
+  min-width: 160px;
+  flex: 1 1 0;
+}
+.toss-footer .footer-col h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #222;
+}
+.toss-footer .footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toss-footer .footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.98rem;
+  color: #222;
+}
+.toss-footer .footer-col ul li a {
+  color: #222;
   text-decoration: none;
-  font-size: 1rem;
+  transition: color 0.2s;
 }
-.footer-copy {
+.toss-footer .footer-col ul li a:hover {
+  color: #3182f6;
+}
+.toss-footer .footer-company {
   font-size: 0.95rem;
-  color: #bbb;
+  color: #888;
+  margin-bottom: 18px;
+  line-height: 1.7;
 }
+.toss-footer .footer-policy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.toss-footer .footer-policy a {
+  color: #888;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.toss-footer .footer-policy a:hover {
+  color: #3182f6;
+}
+.toss-footer .footer-sns {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+.toss-footer .footer-sns a img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(1) brightness(1.5);
+  transition: filter 0.2s;
+}
+.toss-footer .footer-sns a:hover img {
+  filter: none;
+}
+@media (max-width: 900px) {
+  .toss-footer .footer-links {
+    flex-direction: column;
+    gap: 0;
+  }
+  .toss-footer .footer-col {
+    margin-bottom: 32px;
+  }
+  .toss-footer .footer-inner {
+    padding: 0 12px;
+  }
+}
+@media (max-width: 600px) {
+  .toss-footer {
+    padding: 32px 0 16px 0;
+    font-size: 0.95rem;
+  }
+  .toss-footer .footer-sns a img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* 팝업 */
 .popup {
   position: fixed;
   width: 420px;
@@ -961,3 +1044,106 @@ button {
   }
 }
 /* ===================== 결제 섹션 끝 ===================== */
+
+/* ===================== 비즈니스 고객 제보 섹션 ===================== */
+.business-report-section {
+  background: #fff; /* 배경색을 흰색으로 변경 */
+  padding: 64px 0 56px 0;
+  border-top: 1px solid #eceff1;
+}
+.business-report-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+.business-report-text {
+  flex: 1 1 0;
+  text-align: left;
+}
+.business-report-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #222;
+}
+.business-report-text p {
+  font-size: 1.15rem;
+  color: #4e5968;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+.business-report-btn {
+  display: inline-block;
+  background: #e8f3ff;
+  color: #3182f6;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.business-report-btn:hover {
+  background: #3182f6;
+  color: #fff;
+}
+.business-report-img {
+  flex: 0 0 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.business-report-img img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+@media (max-width: 900px) {
+  .business-report-inner {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+  .business-report-text {
+    text-align: center;
+  }
+  .business-report-img {
+    justify-content: center;
+  }
+}
+/* 닷 애니매이션 */
+.dot {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    width: 64px;
+    height: 64px;
+    background: #3182f6;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(49,130,246,0.15);
+}
+.dot.on {
+    opacity: 1;
+}
+.dot::before {
+    content: '↑';
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    top: 2px;
+}
+.dot:hover {
+    background: #1657c1;
+}
+/* ===================== 비즈니스 고객 제보 섹션 끝 ===================== */
