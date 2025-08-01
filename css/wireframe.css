@@ -823,6 +823,8 @@ button {
   box-shadow: none;
   display: block;
   will-change: transform;
+  opacity: 1;
+  transform: scale(0);
 }
 .recruit-visual-text {
   position: absolute;

@@ -66,14 +66,15 @@ window.addEventListener('scroll', function() {
   if (!recruitSection || !recruitImg) return;
   const rect = recruitSection.getBoundingClientRect();
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  // 섹션이 화면에 들어오면 확대, 벗어나면 원래대로
   if (rect.top < windowHeight && rect.bottom > 0) {
-    // 스크롤 위치에 따라 확대 비율 계산 (최대 1.35배로 더 크게)
     const visible = Math.min(1, Math.max(0, (windowHeight - rect.top) / (rect.height + windowHeight)));
-    const scale = 1 + visible * 0.35;
+    // visible이 0.4만 되어도 scale 1이 되게
+    const scale = Math.min(1, visible * 2.5);
     recruitImg.style.transform = `scale(${scale})`;
+    recruitImg.style.opacity = 1;
   } else {
-    recruitImg.style.transform = 'scale(1)';
+    recruitImg.style.transform = 'scale(0)';
+    recruitImg.style.opacity = 1;
   }
 });
 // ===================== 인재(채용) 섹션 스크롤 이미지 확대 끝 =====================
