@@ -1,13 +1,16 @@
 @charset "utf-8";
 
 /* Prevent horizontal scroll globally */
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100vw;
 }
 
 /* Ensure all elements use border-box for sizing */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -26,6 +29,7 @@ body {
   top: 0;
   z-index: 100;
 }
+
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -34,9 +38,11 @@ body {
   justify-content: space-between;
   padding: 20px 24px;
 }
+
 .logo img {
   height: 32px;
 }
+
 .main-nav ul {
   display: flex;
   gap: 32px;
@@ -44,12 +50,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .main-nav a {
   color: #222;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
 }
+
 .header-actions .login-btn {
   background: #3182f6;
   color: #fff;
@@ -73,6 +81,7 @@ body {
   margin-left: -50vw;
   margin-right: -50vw;
 }
+
 .main-visual-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -82,21 +91,25 @@ body {
   gap: 40px;
   height: 100%;
 }
+
 .main-text {
   max-width: 500px;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
   padding: 40px 32px;
   border-radius: 24px;
 }
+
 .main-text h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .main-text p {
   font-size: 1.2rem;
   margin-bottom: 32px;
 }
+
 .main-cta {
   display: inline-block;
   background: #3182f6;
@@ -107,23 +120,7 @@ body {
   font-weight: 600;
   text-decoration: none;
 }
-@media (max-width: 900px) {
-  .main-visual {
-    background-position: center 80px;
-    background-size: cover;
-    padding: 60px 0 40px 0;
-    min-height: 320px;
-  }
-  .main-text {
-    padding: 24px 12px;
-    max-width: 100%;
-  }
-  .main-visual-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-}
+
 /* 여기까지 메인  와이어에 있는거 */
 
 
@@ -135,6 +132,7 @@ body {
   justify-content: center;
   padding: 0;
 }
+
 .bank-visual-inner {
   max-width: 1200px;
   width: 100%;
@@ -144,6 +142,7 @@ body {
   justify-content: space-between;
   gap: 40px;
 }
+
 .bank-text {
   flex: 1 1 0;
   font-size: 2.6rem;
@@ -152,37 +151,21 @@ body {
   color: #222;
   letter-spacing: -2px;
 }
+
 .bank-visual-image {
   flex: 1 1 0;
   display: flex;
   justify-content: flex-end;
 }
+
 .bank-visual-image img {
-  width: 340px; /* 기존 420px에서 340px로 줄임 */
+  width: 340px;
+  /* 기존 420px에서 340px로 줄임 */
   max-width: 100%;
   height: auto;
   display: block;
-  box-shadow: 0 8px 32px 0 rgba(30,32,37,0.10);
+  box-shadow: 0 8px 32px 0 rgba(30, 32, 37, 0.10);
   border-radius: 36px;
-}
-@media (max-width: 900px) {
-  .bank-visual {
-    min-height: 400px;
-    padding: 0 0 32px 0;
-  }
-  .bank-visual-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-  }
-  .bank-visual-image img {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-  .bank-text {
-    font-size: 2rem;
-  }
 }
 
 /* 새롭게추가 */
@@ -190,6 +173,7 @@ body {
   background: #fff;
   padding: 100px 0 80px 0;
 }
+
 .service-feature-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -198,20 +182,24 @@ body {
   justify-content: space-between;
   gap: 60px;
 }
+
 .feature-text {
   flex: 1 1 0;
 }
+
 .feature-text h2 {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 24px;
 }
+
 .feature-text p {
   font-size: 1.3rem;
   color: #222;
   margin-bottom: 32px;
   line-height: 1.5;
 }
+
 .feature-btn {
   display: inline-block;
   background: #3182f6;
@@ -222,28 +210,33 @@ body {
   font-weight: 600;
   text-decoration: none;
 }
+
 .feature-image {
   flex: 1 1 0;
   display: flex;
   justify-content: flex-end;
 }
+
 .feature-image img {
   width: 420px;
   max-width: 100%;
   border-radius: 36px;
-  box-shadow: 0 8px 32px 0 rgba(30,32,37,0.10);
+  box-shadow: 0 8px 32px 0 rgba(30, 32, 37, 0.10);
 }
+
 @media (max-width: 900px) {
   .service-feature-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 32px;
   }
+
   .feature-image img {
     width: 100%;
     max-width: 340px;
     margin: 0 auto;
   }
+
   .feature-text h2 {
     font-size: 1.5rem;
   }
@@ -255,18 +248,21 @@ body {
   background: #fff;
   padding: 120px 0 100px 0;
 }
+
 .loan-feature-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 60px;
 }
+
 .loan-text {
   flex: 1 1 0;
   margin-top: 40px;
 }
+
 .loan-label {
   color: #3182f6;
   font-weight: 700;
@@ -274,12 +270,14 @@ body {
   margin-bottom: 16px;
   display: inline-block;
 }
+
 .loan-text h2 {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 48px;
   line-height: 1.25;
 }
+
 .loan-desc strong {
   font-size: 1.5rem;
   color: #222;
@@ -288,64 +286,81 @@ body {
   display: block;
   margin-bottom: 16px;
 }
+
 .loan-desc p {
   color: #666;
   font-size: 1.1rem;
   line-height: 1.7;
 }
+
 .loan-phone {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .phone-slider {
   position: relative;
   width: 340px;
-  height: 680px; /* 기존 700px에서 680px로 20px 줄임 (상하 10px씩) */
+  height: 680px;
+  /* 기존 700px에서 680px로 20px 줄임 (상하 10px씩) */
 }
+
 .phone-slider img {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
   opacity: 0;
   transition: opacity 0.6s;
   z-index: 1;
-  box-shadow: 0 8px 32px 0 rgba(30,32,37,0.10); /* bank-visual-image와 동일한 그림자 추가 */
-  border-radius: 36px; /* 동일하게 라운드 처리 */
+  box-shadow: 0 8px 32px 0 rgba(30, 32, 37, 0.10);
+  /* bank-visual-image와 동일한 그림자 추가 */
+  border-radius: 36px;
+  /* 동일하게 라운드 처리 */
 }
+
 .phone-slider img.active {
   opacity: 1;
   z-index: 2;
 }
+
 .phone-dots {
   margin-top: 24px;
   text-align: center;
 }
+
 .phone-dots .dot {
   display: inline-block;
-  width: 10px; height: 10px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #e0e6ef;
   margin: 0 6px;
   transition: background 0.3s;
 }
+
 .phone-dots .dot.active {
   background: #3182f6;
 }
+
 @media (max-width: 900px) {
   .loan-feature-inner {
     flex-direction: column;
     gap: 32px;
   }
+
   .phone-slider {
     width: 90vw;
     max-width: 340px;
-    height: 480px; /* 기존 500px에서 480px로 20px 줄임 */
+    height: 480px;
+    /* 기존 500px에서 480px로 20px 줄임 */
   }
 }
+
 /* 여기까지 슬라이드 */
 
 /* 신용 섹션 */
@@ -355,14 +370,17 @@ body {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
 .credit-inner {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
+
 .credit-header {
   margin-bottom: 56px;
 }
+
 .credit-header .credit-label {
   color: #3182f6;
   font-weight: 700;
@@ -371,6 +389,7 @@ body {
   margin-bottom: 12px;
   text-align: left;
 }
+
 .credit-header h2 {
   font-size: 2.2rem;
   font-weight: 700;
@@ -379,58 +398,74 @@ body {
   text-align: left;
   line-height: 1.3;
 }
+
 .credit-features {
   display: flex;
   justify-content: center;
   gap: 48px 40px;
   flex-wrap: wrap;
 }
+
 .credit-feature {
   background: none;
   width: 240px;
   text-align: center;
   margin-bottom: 40px;
 }
+
 .credit-feature img {
   width: 64px;
   height: 64px;
   margin-bottom: 18px;
 }
+
 .credit-feature h3 {
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: #222;
 }
+
 .credit-feature p {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
 }
+
 @media (max-width: 900px) {
+
   .credit-section {
     padding: 60px 0 40px 0;
     margin-top: 24px;
     margin-bottom: 24px;
   }
+
   .credit-features {
     flex-direction: column;
     align-items: center;
     gap: 32px;
   }
+
   .credit-feature {
     width: 100%;
     max-width: 340px;
     margin-bottom: 32px;
   }
+
   .credit-header h2 {
     font-size: 1.3rem;
     margin-bottom: 0;
   }
-  .credit-header {
+
+  .credit-inner {
     margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
   }
 }
+
 /* 신용끝 */
 /* 혁신 섹션 */
 .innovation-section {
@@ -438,23 +473,27 @@ body {
   padding: 60px 0;
   text-align: center;
 }
+
 .innovation-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
 }
+
 .innovation-list {
   display: flex;
   justify-content: center;
   gap: 32px;
 }
+
 .innovation-card {
   background: #fff;
   border-radius: 20px;
   padding: 32px 24px;
   width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   text-align: center;
 }
+
 .innovation-card img {
   height: 48px;
   margin-bottom: 12px;
@@ -471,6 +510,7 @@ body {
   margin-bottom: 32px;
   text-align: center;
 }
+
 .security-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -479,10 +519,12 @@ body {
   justify-content: space-between;
   gap: 40px;
 }
+
 .security-info h3 {
   font-size: 1.2rem;
   margin-bottom: 8px;
 }
+
 .security-image img {
   max-width: 240px;
   width: 100%;
@@ -494,23 +536,27 @@ body {
   padding: 60px 0;
   text-align: center;
 }
+
 .news-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
 }
+
 .news-list {
   display: flex;
   justify-content: center;
   gap: 32px;
 }
+
 .news-card {
   background: #fff;
   border-radius: 20px;
   padding: 32px 24px;
   width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   text-align: center;
 }
+
 .news-card img {
   height: 48px;
   margin-bottom: 12px;
@@ -521,11 +567,13 @@ body {
   background: #fff;
   padding: 60px 0;
 }
+
 .recruit-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
   text-align: center;
 }
+
 .recruit-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -534,10 +582,12 @@ body {
   justify-content: space-between;
   gap: 40px;
 }
+
 .recruit-info p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
 .recruit-btn {
   display: inline-block;
   background: #3182f6;
@@ -547,6 +597,7 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+
 .recruit-image img {
   max-width: 240px;
   width: 100%;
@@ -558,15 +609,18 @@ body {
   padding: 60px 0;
   text-align: center;
 }
+
 .download-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
 }
+
 .download-inner {
   display: flex;
   justify-content: center;
   gap: 24px;
 }
+
 .download-btn {
   display: inline-block;
   background: #3182f6;
@@ -584,23 +638,27 @@ body {
   padding: 60px 0;
   text-align: center;
 }
+
 .benefit-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
 }
+
 .benefit-list {
   display: flex;
   justify-content: center;
   gap: 32px;
 }
+
 .benefit-card {
   background: #eaf3ff;
   border-radius: 20px;
   padding: 32px 24px;
   width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   text-align: center;
 }
+
 .benefit-card img {
   height: 48px;
   margin-bottom: 12px;
@@ -612,10 +670,12 @@ body {
   padding: 60px 0;
   text-align: center;
 }
+
 .event-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
 }
+
 .event-banner img {
   max-width: 600px;
   width: 100%;
@@ -627,11 +687,13 @@ body {
   background: #f5f7fa;
   padding: 60px 0;
 }
+
 .customer-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
   text-align: center;
 }
+
 .customer-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -640,10 +702,12 @@ body {
   justify-content: space-between;
   gap: 40px;
 }
+
 .customer-info p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
 .customer-btn {
   display: inline-block;
   background: #3182f6;
@@ -653,6 +717,7 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+
 .customer-image img {
   max-width: 240px;
   width: 100%;
@@ -666,11 +731,13 @@ body {
   font-size: 1rem;
   font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
 }
+
 .toss-footer .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
+
 .toss-footer .footer-links {
   display: flex;
   justify-content: flex-start;
@@ -678,86 +745,120 @@ body {
   margin-bottom: 40px;
   flex-wrap: wrap;
 }
+
 .toss-footer .footer-col {
   min-width: 160px;
   flex: 1 1 0;
 }
+
 .toss-footer .footer-col h4 {
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 18px;
   color: #222;
 }
+
 .toss-footer .footer-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .toss-footer .footer-col ul li {
   margin-bottom: 10px;
   font-size: 0.98rem;
   color: #222;
 }
+
 .toss-footer .footer-col ul li a {
   color: #222;
   text-decoration: none;
   transition: color 0.2s;
 }
+
 .toss-footer .footer-col ul li a:hover {
   color: #3182f6;
 }
+
 .toss-footer .footer-company {
   font-size: 0.95rem;
   color: #888;
   margin-bottom: 18px;
   line-height: 1.7;
 }
+
 .toss-footer .footer-policy {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 24px;
 }
+
 .toss-footer .footer-policy a {
   color: #888;
   font-size: 0.95rem;
   text-decoration: none;
   transition: color 0.2s;
 }
+
 .toss-footer .footer-policy a:hover {
   color: #3182f6;
 }
+
 .toss-footer .footer-sns {
   display: flex;
   gap: 16px;
   margin-top: 8px;
 }
+
 .toss-footer .footer-sns a img {
   width: 28px;
   height: 28px;
-  filter: grayscale(1) brightness(1.5);
-  transition: filter 0.2s;
-}
-.toss-footer .footer-sns a:hover img {
   filter: none;
 }
+
 @media (max-width: 900px) {
   .toss-footer .footer-links {
-    flex-direction: column;
-    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d";
+    justify-items: center;
   }
+
+  .footer-links>.footer-col:nth-child(1) {
+    grid-area: a;
+  }
+
+  .footer-links>.footer-col:nth-child(2) {
+    grid-area: b;
+  }
+
+  .footer-links>.footer-col:nth-child(3) {
+    grid-area: c;
+  }
+
+  .footer-links>.footer-col:nth-child(4) {
+    grid-area: d;
+  }
+
   .toss-footer .footer-col {
     margin-bottom: 32px;
   }
+
   .toss-footer .footer-inner {
     padding: 0 12px;
   }
 }
+
 @media (max-width: 600px) {
   .toss-footer {
     padding: 32px 0 16px 0;
     font-size: 0.95rem;
   }
+
   .toss-footer .footer-sns a img {
     width: 22px;
     height: 22px;
@@ -781,6 +882,7 @@ body {
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
   line-height: 1.75;
 }
+
 button {
   display: block;
   padding: 8px 16px;
@@ -795,11 +897,13 @@ button {
   padding: 0;
   text-align: center;
 }
+
 .recruit-visual-inner {
   max-width: none;
   margin: 0;
   position: relative;
 }
+
 .recruit-visual-image {
   position: relative;
   display: flex;
@@ -812,6 +916,7 @@ button {
   max-height: 900px;
   margin: 0 auto;
 }
+
 .recruit-visual-image img {
   width: 100vw;
   height: 100%;
@@ -819,13 +924,14 @@ button {
   min-width: 100vw;
   object-fit: cover;
   border-radius: 0;
-  transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
+  transition: transform 0.7s cubic-bezier(.22, .61, .36, 1);
   box-shadow: none;
   display: block;
   will-change: transform;
   opacity: 1;
   transform: scale(0);
 }
+
 .recruit-visual-text {
   position: absolute;
   left: 50%;
@@ -834,22 +940,25 @@ button {
   color: #fff;
   font-size: 3.2rem;
   font-weight: 700;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
   white-space: pre-line;
   pointer-events: none;
 }
+
 @media (max-width: 900px) {
   .recruit-visual-image {
     min-height: 40vh;
     height: 45vw;
     max-height: 400px;
   }
+
   .recruit-visual-image img {
     width: 100vw;
     min-width: 100vw;
     height: 100%;
     object-fit: cover;
   }
+
   .recruit-visual-text {
     font-size: 1.5rem;
   }
@@ -864,6 +973,7 @@ button {
   flex-direction: column;
   align-items: center;
 }
+
 .estate-car-inner {
   display: flex;
   flex-direction: column;
@@ -871,6 +981,7 @@ button {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .estate-car-image-wrap {
   width: 600px;
   height: 400px;
@@ -882,14 +993,16 @@ button {
   align-items: center;
   justify-content: center;
 }
+
 .estate-car-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
+  transition: transform 0.7s cubic-bezier(.22, .61, .36, 1);
   will-change: transform;
 }
+
 .estate-car-title {
   margin-top: 40px;
   font-size: 2.2rem;
@@ -897,6 +1010,7 @@ button {
   color: #222;
   text-align: left;
 }
+
 .estate-car-subtitle {
   font-size: 1.5rem;
   color: #b0b8c1;
@@ -905,6 +1019,7 @@ button {
   margin-bottom: 16px;
   text-align: left;
 }
+
 .estate-car-desc {
   font-size: 1.1rem;
   color: #4e5968;
@@ -912,6 +1027,7 @@ button {
   text-align: left;
   margin-bottom: 32px;
 }
+
 @media (max-width: 900px) {
   .estate-car-image-wrap {
     width: 90vw;
@@ -919,16 +1035,20 @@ button {
     min-height: 200px;
     max-width: 100vw;
   }
+
   .estate-car-inner {
     max-width: 100vw;
   }
+
   .estate-car-title {
     font-size: 1.3rem;
     margin-top: 24px;
   }
+
   .estate-car-subtitle {
     font-size: 1rem;
   }
+
   .estate-car-desc {
     font-size: 0.95rem;
   }
@@ -944,6 +1064,7 @@ button {
   align-items: center;
   overflow: hidden;
 }
+
 .pay-inner {
   display: flex;
   flex-direction: row;
@@ -955,6 +1076,7 @@ button {
   gap: 80px;
   position: relative;
 }
+
 .pay-text-block {
   flex: 1 1 340px;
   display: flex;
@@ -963,8 +1085,9 @@ button {
   margin-bottom: 60px;
   opacity: 0;
   transform: translateY(60px);
-  transition: opacity 0.8s cubic-bezier(.22,.61,.36,1), transform 0.8s cubic-bezier(.22,.61,.36,1);
+  transition: opacity 0.8s cubic-bezier(.22, .61, .36, 1), transform 0.8s cubic-bezier(.22, .61, .36, 1);
 }
+
 .pay-image-block {
   flex: 1 1 500px;
   display: flex;
@@ -974,22 +1097,26 @@ button {
   gap: 40px;
   opacity: 0;
   transform: translateY(60px);
-  transition: opacity 0.8s cubic-bezier(.22,.61,.36,1) 0.2s, transform 0.8s cubic-bezier(.22,.61,.36,1) 0.2s;
+  transition: opacity 0.8s cubic-bezier(.22, .61, .36, 1) 0.2s, transform 0.8s cubic-bezier(.22, .61, .36, 1) 0.2s;
 }
+
 .pay-section.active .pay-text-block {
   opacity: 1;
   transform: translateY(0);
 }
+
 .pay-section.active .pay-image-block {
   opacity: 1;
   transform: translateY(0);
 }
+
 .pay-label {
   color: #3182f6;
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
+
 .pay-title {
   font-size: 2.3rem;
   font-weight: 700;
@@ -997,37 +1124,45 @@ button {
   margin-bottom: 18px;
   line-height: 1.3;
 }
+
 .pay-desc {
   font-size: 1.1rem;
   color: #4e5968;
   line-height: 1.7;
 }
+
 .pay-img {
   display: block;
   border-radius: 32px;
   box-shadow: 0 8px 32px 0 rgba(30, 32, 37, 0.10);
   background: #fff;
-  transition: transform 0.7s cubic-bezier(.22,.61,.36,1), box-shadow 0.7s cubic-bezier(.22,.61,.36,1);
+  transition: transform 0.7s cubic-bezier(.22, .61, .36, 1), box-shadow 0.7s cubic-bezier(.22, .61, .36, 1);
   will-change: transform;
 }
-.pay-img-barcode, .pay-img-receipt {
+
+.pay-img-barcode,
+.pay-img-receipt {
   width: 340px;
   height: 550px;
   object-fit: contain;
   margin: 0;
   background: #fff;
 }
+
 @media (max-width: 900px) {
   .pay-inner {
     flex-direction: column;
     gap: 32px;
     align-items: center;
   }
+
   .pay-image-block {
     flex-direction: row;
     gap: 16px;
   }
-  .pay-img-barcode, .pay-img-receipt {
+
+  .pay-img-barcode,
+  .pay-img-receipt {
     width: 60vw;
     height: 95vw;
     min-width: 120px;
@@ -1035,24 +1170,31 @@ button {
     max-width: 340px;
     max-height: 550px;
   }
+
   .pay-title {
     font-size: 1.3rem;
   }
+
   .pay-label {
     font-size: 0.95rem;
   }
-  .pay-desc, .pay-bottom-desc {
+
+  .pay-desc,
+  .pay-bottom-desc {
     font-size: 0.95rem;
   }
 }
+
 /* ===================== 결제 섹션 끝 ===================== */
 
 /* ===================== 비즈니스 고객 제보 섹션 ===================== */
 .business-report-section {
-  background: #fff; /* 배경색을 흰색으로 변경 */
+  background: #fff;
+  /* 배경색을 흰색으로 변경 */
   padding: 64px 0 56px 0;
   border-top: 1px solid #eceff1;
 }
+
 .business-report-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -1061,22 +1203,26 @@ button {
   justify-content: center;
   gap: 80px;
 }
+
 .business-report-text {
   flex: 1 1 0;
   text-align: left;
 }
+
 .business-report-text h2 {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 18px;
   color: #222;
 }
+
 .business-report-text p {
   font-size: 1.15rem;
   color: #4e5968;
   margin-bottom: 28px;
   line-height: 1.6;
 }
+
 .business-report-btn {
   display: inline-block;
   background: #e8f3ff;
@@ -1088,64 +1234,89 @@ button {
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
 }
+
 .business-report-btn:hover {
   background: #3182f6;
   color: #fff;
 }
+
 .business-report-img {
   flex: 0 0 220px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .business-report-img img {
   width: 180px;
   height: auto;
   display: block;
 }
+
 @media (max-width: 900px) {
   .business-report-inner {
     flex-direction: column;
     gap: 32px;
     text-align: center;
   }
+
   .business-report-text {
     text-align: center;
   }
+
   .business-report-img {
     justify-content: center;
   }
 }
+
 /* 닷 애니매이션 */
 .dot {
-    position: fixed;
-    right: 32px;
-    bottom: 32px;
-    width: 64px;
-    height: 64px;
-    background: #3182f6;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.4s;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(49,130,246,0.15);
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  width: 64px;
+  height: 64px;
+  background: #3182f6;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(49, 130, 246, 0.15);
 }
+
 .dot.on {
-    opacity: 1;
+  opacity: 1;
 }
+
 .dot::before {
-    content: '↑';
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-    position: relative;
-    top: 2px;
+  content: '↑';
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  top: 2px;
 }
+
 .dot:hover {
-    background: #1657c1;
+  background: #1657c1;
 }
+
 /* ===================== 비즈니스 고객 제보 섹션 끝 ===================== */
+
+
+
+/* section */
+
+section {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+
+
+.visually-hidden {
+  visibility: hidden;
+}
